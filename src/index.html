@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Protein Cost</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="text-center my-5 display-3">Calculate Protein</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label>Enter Cost of Item</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">$</div>
+            </div>
+            <input type="number" class="form-control" id="totalCost" placeholder="Cost">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label>Servings Per Container</label>
+          <input type="number" class="form-control" id="servPerCont" placeholder="Servings">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label>Protein Per Serving</label>
+          <input type="number" class="form-control" id="proPerServ" placeholder="Protein Per Serving">
+        </div>
+      </div>
+    </div>
+    <div id="costPerGram" class="col-md-12 text-center">
+    </div>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/scrollreveal.min.js"></script>
+</body>
+
+</html>
