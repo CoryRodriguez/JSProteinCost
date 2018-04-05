@@ -14,9 +14,9 @@ const costPerGram = document.querySelector('#costPerGram');
 //   console.log(costAmount);
 // });
 
-totalCost.value = 36;
-servPerCont.value = 100;
-proPerServ.value = 19;
+// totalCost.value = 36;
+// servPerCont.value = 100;
+// proPerServ.value = 19;
 
 function calculateResult() {
   const dollarAmount = totalCost.value;
