@@ -3,10 +3,10 @@ const servPerCont = document.querySelector('#servPerCont');
 const proPerServ = document.querySelector('#proPerServ');
 const costPerGram = document.querySelector('#costPerGram');
 
-document.getElementById('calcForm').addEventListener('submit', (e) => {
+document.getElementById('calcForm').addEventListener('input', (e) => {
   calculateResult();
-
-  e.preventDefault();
+  almostThere();
+  // e.preventDefault();
 });
 
 
@@ -18,15 +18,28 @@ function calculateResult() {
   const calculation = (dollarAmount / (contServings * proServ)).toFixed(2);
 
   costPerGram.innerText = "$" + calculation;
-
-  almostThere();
+  
+  
 }
 
 function almostThere(){
-  if(costOfItem.value === ''){
-    console.log('nope!');
+  let count = '';
+
+  if (costOfItem.value !== '' || servPerCont.value !== '' || proPerServ.value !== '') {
+    count ++;
+    costPerGram.innerText = "Good Start!";
+    console.log(count);
+  } else if (costOfItem.value !== '' && servPerCont.value !== '' && proPerServ.value === '') {
+    costPerGram.innerText = "Almost there!";
+
   }
 }
+
+// Additional 
+// 0 = Enter a number!
+// 1 = Good start!
+// 2 = Almost there!
+// 3 = ?
 
 // costPerGram.addEventListener('submit', (e) => {
 //   //cards.style.visibility = 'visible';
