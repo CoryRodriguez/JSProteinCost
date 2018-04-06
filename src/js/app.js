@@ -1,10 +1,10 @@
-const totalCost = document.querySelector('#totalCost');
+const costOfItem = document.querySelector('#costOfItem');
 const servPerCont = document.querySelector('#servPerCont');
 const proPerServ = document.querySelector('#proPerServ');
 const costPerGram = document.querySelector('#costPerGram');
 
 
-// totalCost.addEventListener('input', (e) => {
+// costOfItem.addEventListener('input', (e) => {
 //   //cards.style.visibility = 'visible';
 //   let costAmount = e.target.value;
 //   // gramsOutput.innerText = lbs * 453.592;
@@ -14,20 +14,53 @@ const costPerGram = document.querySelector('#costPerGram');
 //   console.log(costAmount);
 // });
 
-// totalCost.value = 36;
-// servPerCont.value = 100;
-// proPerServ.value = 19;
+costOfItem.addEventListener('input', (e) => {
+  //cards.style.visibility = 'visible';
+  let costAmount = e.target.value;
 
-function calculateResult() {
-  const dollarAmount = totalCost.value;
+  const dollarAmount = costOfItem.value;
   const contServings = servPerCont.value;
   const proServ = proPerServ.value;
 
-  const calculation = (dollarAmount / (contServings * proServ)).toFixed(2);
+  e.preventDefault();
+  //console.log(costOfItem.value);
+  console.log(servPerCont);
+});
 
-  costPerGram.innerText = calculation;
-}
-calculateResult();
+servPerCont.addEventListener('input', (e) => {
+  //cards.style.visibility = 'visible';
+  let servPerCont = e.target.value;
+
+  e.preventDefault();
+
+  //console.log(servPerCont);
+});
+
+proPerServ.addEventListener('input', (e) => {
+  //cards.style.visibility = 'visible';
+  let proPerServ = e.target.value;
+
+  e.preventDefault();
+
+  //console.log(proPerServ);
+});
+
+
+
+// costOfItem.value = 36;
+// servPerCont.value = 100;
+// proPerServ.value = 19;
+
+// function calculateResult() {
+//   const dollarAmount = costOfItem.value;
+//   const contServings = servPerCont.value;
+//   const proServ = proPerServ.value;
+
+//   const calculation = (dollarAmount / (contServings * proServ)).toFixed(2);
+
+//   costPerGram.innerText = calculation;
+// }
+// calculateResult();
 
 
 
