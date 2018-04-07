@@ -3,9 +3,10 @@ const servPerCont = document.querySelector('#servPerCont');
 const proPerServ = document.querySelector('#proPerServ');
 const costPerGram = document.querySelector('#costPerGram');
 
+let count = 0;
+
 document.getElementById('calcForm').addEventListener('input', (e) => {
   calculateResult();
-  almostThere();
   // e.preventDefault();
 });
 
@@ -17,23 +18,41 @@ function calculateResult() {
 
   const calculation = (dollarAmount / (contServings * proServ)).toFixed(2);
 
-  costPerGram.innerText = "$" + calculation;
   
-  
-}
-
-function almostThere(){
-  let count = '';
-
-  if (costOfItem.value !== '' || servPerCont.value !== '' || proPerServ.value !== '') {
-    count ++;
-    costPerGram.innerText = "Good Start!";
-    console.log(count);
-  } else if (costOfItem.value !== '' && servPerCont.value !== '' && proPerServ.value === '') {
-    costPerGram.innerText = "Almost there!";
+  if(dollarAmount === '' || contServings === '' || proServ === ''){
+    costPerGram.innerText = '';
+  } else{
+    costPerGram.classList.remove = 'd-none';
+    costPerGram.innerText = "$" + calculation;
 
   }
+  
 }
+
+// function almostThere(){
+
+//   if (costOfItem.value !== '' || servPerCont.value !== '' || proPerServ.value !== '') {
+//     counting();
+//     costPerGram.innerText = "Good Start!";
+//   } else if (count === 2) {
+    
+
+//   }
+  
+
+// }
+// console.log(count)
+
+// function counting(){
+//   count ++;
+
+//   if(count === 2){
+//     count++;
+//     costPerGram.innerText = "Almost there!";
+//   }
+// }
+
+// console.log(count)
 
 // Additional 
 // 0 = Enter a number!
